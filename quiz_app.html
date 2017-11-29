@@ -1,0 +1,136 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Quiz application</title>
+<link href="quiz_app.css" rel="stylesheet" type="text/css">
+<link href="resetCSS.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+     
+    <div id="quizCont" class="quizCont">
+      
+       <div class="questionCont">
+           <p id="question"></p>
+	   </div>
+        
+        <div id="controlsCont"> 
+           <input class="inputClass buttonClass" type="button" id="submit" value="Submit"/>
+           <input class="inputClass" type="text" id="inputAnswer" />
+           <input class="inputClass buttonClass" type="button" id="nextQuestion" value="Next Question"/> 
+           <input class="inputClass buttonClass" type="button" id="showAnswer" value="Show Answer" />  
+             
+              <div class="modulesCont" id="modulesCont">
+                 <input class="dropDownButton" type="button" id="dropDownButton" value="Question Pool" /> 
+                     <div id="moduleList" class="dropDownContent">
+                            
+                         <div id="dropDownAddModules">
+                         <input class="dropDownButton" type="button" id="dropDownButton2" value="Add Modules" /> 
+                             <div id="addModuleList" class="dropDownContent">
+                                 <li class="topicClass" id="Li1">HTML <input type="button" class="Btns2" id="B1" value="Add"></li>
+                                 <li class="topicClass" id="Li2">CSS <input type="button" class="Btns2" id="B2" value="Add"></li>
+                                 <li class="topicClass" id="Li3">SASS <input type="button" class="Btns2" id="B3" value="Add"></li>
+                                 <li class="topicClass" id="Li4">JS Terms <input type="button" class="Btns2" id="B4" value="Add"></li>
+                                 <li class="topicClass" id="Li5">JS Reserved Words <input type="button" class="Btns2" id="B5" value="Add"></li>
+                                 <li class="topicClass" id="Li6">JS Methods <input type="button" class="Btns2" id="B6" value="Add"></li>
+                             </div>
+                         </div>
+                     </div>
+                 </div>
+                 
+                 <div class="ratioClass" id="ratioDiv">
+                     <div class="ratioRed" id="ratioRed"></div>
+                     <div class="ratioGreen" id="ratioGreen"></div>
+                     <h4 id="ratio">Correct/Incorrect ratio:</h4>
+                 </div> 
+                
+                <input id="backButton" class="inputClass buttonClass bottomButton bottomLeft" type="button" value="Back" />
+                <input id="saveButton" class="inputClass buttonClass bottomButton bottomRight" type="button" value="Save" />
+                     
+		  </div>
+		  <div class="errorMessage" id="errorMessage"></div>
+		  
+		   <div id="pickModules" class="pickModules">
+	   	       <div>
+	   	       	    <p>Add or remove question modules from the question pool.</p>
+	   	       </div>
+		   	   <button id="but1" class="moduleButtons leftButtons">HTML</button>
+		   	   <button id="but2" class="moduleButtons rightButtons">CSS</button>
+		   	   <button class="moduleButtons leftButtons">SASS</button>
+		   	   <button class="moduleButtons rightButtons">JS Terms</button>
+		   	   <button class="moduleButtons leftButtons">JS Reserved Words</button>
+		   	   <button class="moduleButtons rightButtons" >JS Methods</button>
+		   	  
+		   	   <input id="backToUser" class="inputClass buttonClass modBottomButton bottomLeft" type="button" value="Back" />
+               <input id="startButton" class="inputClass buttonClass modBottomButton bottomRight" type="button" value="Start" />
+		   </div> 
+		   
+		   <div id="userPage" class="userPage">
+		       <div class="welcomeUser">
+	   	       	    <p id="welcomeUser">Welcome back Adametri. Your answer stats are as follows...</p>
+	   	       </div>
+	   	       <div class="userStats">
+				    <p class="moduleName">HTML</p>
+   	                <span class="redStat"></span>
+	   	       	    <span id="greenStat1" class="greenStat"></span>
+	   	       	    <p id="percentage1" class="percentage"></p>
+	   	       </div>
+	   	       <div class="userStats">
+	   	       	    <p class="moduleName">CSS</p>
+	   	       	    <span class="redStat"></span>
+	   	       	    <span id="greenStat2" class="greenStat"></span>
+	   	       	    <p id="percentage2" class="percentage"></p>
+	   	       </div>
+	   	       <div class="userStats">
+	   	       	    <p class="moduleName">SASS</p>
+	   	       	    <span class="redStat"></span>
+	   	       	    <span id="greenStat3" class="greenStat"></span>
+	   	       	    <p id="percentage3" class="percentage"></p>
+	   	       </div>
+	   	          <div class="userStats">
+	   	       	    <p class="moduleName">JS T</p>
+	   	       	    <span class="redStat"></span>
+	   	       	    <span id="greenStat4" class="greenStat"></span>
+	   	       	    <p id="percentage4" class="percentage"></p>
+	   	       </div>
+	   	       <div class="userStats">
+	   	       	    <p class="moduleName">JS RW</p>
+	   	       	    <span class="redStat"></span>
+	   	       	    <span id="greenStat5" class="greenStat"></span>
+	   	       	    <p id="percentage5" class="percentage"></p>
+	   	       </div>
+	   	       <div class="userStats">
+	   	       	    <p class="moduleName">JS M</p>
+	   	       	    <span class="redStat"></span>
+	   	       	    <span id="greenStat6" class="greenStat"></span>
+	   	       	    <p id="percentage6" class="percentage"></p>
+	   	       </div>
+	   	     
+		   	   <input id="backToLogin" class="inputClass buttonClass userBottomButton bottomLeft" type="button" value="Back" />
+               <input id="nextButton" class="inputClass buttonClass userBottomButton bottomRight" type="button" value="Next" />
+		   </div>
+		   
+		   <div id="loginPage" class="loginPage">
+		       <div class="input_cont">
+     	           <label><b>Username</b></label>
+                   <input id="username" class="loginClass" type="text" placeholder="Enter Username" />
+                   
+                   <label><b>Password</b></label>
+                   <input id="password" class="loginClass" type="password" placeholder="Enter Password" />
+                   
+                   <button id="loginSubmit" class="loginSubmit" name="loginSubmit">Login</button>
+     		
+     	           <span class="signUp">Not got an account? <a href="signup_form.php">Sign up</a> or</span>
+     	
+     	           <button id="guestSubmit" class="loginSubmit" name="loginSubmit">Proceed As Guest</button>
+               </div>
+
+		   </div>
+		   	   
+     </div>
+   	
+<script type="text/javascript" src="new_quiz_app.js"></script>   
+</body>
+
+</html>
